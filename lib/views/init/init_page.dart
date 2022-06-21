@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:ubc/extensions/mq_extension.dart';
 
 class InitPage extends StatefulWidget {
@@ -11,6 +9,14 @@ class InitPage extends StatefulWidget {
 }
 
 class _InitPageState extends State<InitPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 2)).then((value) {
+      Navigator.pushReplacementNamed(context, '/onbording');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
